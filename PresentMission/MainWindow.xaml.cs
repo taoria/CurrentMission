@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PresentMission.Model;
+using PresentMission.Tool;
 
 namespace PresentMission
 {
@@ -42,10 +45,18 @@ namespace PresentMission
         private void FinishWork()
         {
             working = false;
+            DateTime rightNow = DateTime.Now;
+            Record record = new Record();
+            record.Time = rightNow;
+            record.DoneMission = labelShow.Content.ToString();
+            RecordResult rr = new RecordResult();
+            //move to a config letter.
+            rr.Read("records.json");
+            rr.Add(record);
+            rr.Write("records.json");
             textBoxWhenEdit.Text = "Mission to be set";
             labelShow.Content = "Mission to be set";
             commitWork.Visibility = Visibility.Hidden;
-
         }
         private void Toggle()
         {

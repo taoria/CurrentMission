@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PresentMission"
         mc:Ignorable="d"
-        Title="Window" Height="100" Width="900"  Topmost="True"  Opacity="1" AllowsTransparency="True" WindowStyle="None" Background="#3F00AEFF" ResizeMode="CanResizeWithGrip"
+        Title="Window" Height="50" Width="450"  Topmost="True"  Opacity="1" AllowsTransparency="True" WindowStyle="None" Background="#3F00AEFF" ResizeMode="CanResizeWithGrip"
         >
   <Window.Resources>
     <ContextMenu x:Key="ContextMenu">

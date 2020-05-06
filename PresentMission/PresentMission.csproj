@@ -6,8 +6,4 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Panuon.UI.Silver" Version="1.1.1" />
-  </ItemGroup>
-
 </Project>
